@@ -1,0 +1,39 @@
+import Tkinter, random, tkMessageBox
+
+master = Tkinter.Tk()
+Canvas = Tkinter.Canvas(master, width=200, height=200, )
+##define size of the canvas upon which to draw
+def line1():
+    Canvas.create_line(20,180,80,180, width=3)
+def line2():
+    Canvas.create_line(50,180,50,20)
+def line3():
+    Canvas.create_line(50,20,150,20)
+def rope():
+    Canvas.create_line(150,20,150,30, fill="gold")
+def head():
+    Canvas.create_oval(140,30,160,50, fill="turquoise", outline="turquoise")
+def body():
+    Canvas.create_line(150,50,150,100, fill="turquoise", width=4)
+def arm1():
+    Canvas.create_line(130,50,150,70, fill="turquoise", width=2)
+def arm2():
+    Canvas.create_line(170,50,150,70, fill="turquoise", width=2)
+def leg1():
+    Canvas.create_line(150,100,170,130, fill="turquoise", width=2.5)
+def leg2():
+    Canvas.create_line(150,100,130,130, fill="turquoise", width=2.5)
+
+Canvas.pack()
+master.mainloop()
+
+
+words = ['cat','hangman','python']
+word = random.choice(words)
+
+##to do list
+##break word into letters
+##user input for a letter
+##if true: draw nothing, user guesses again
+##if false:  draw next hangman part
+##number the guesses
